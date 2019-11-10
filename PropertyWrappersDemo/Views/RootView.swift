@@ -24,8 +24,8 @@ struct RootView: View {
                     Image(systemName: "person.crop.circle")
                     Text("Preferences")
             }.tag(1)
-                        
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

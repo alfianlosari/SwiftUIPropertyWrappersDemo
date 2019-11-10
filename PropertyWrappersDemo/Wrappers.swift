@@ -76,6 +76,11 @@ struct UserDefault<T> {
 
 enum UserPreferences {
     @UserDefault(key: "isCheatModeEnabled", initialValue: false) static var isCheatModeEnabled: Bool
+    @UserDefault(key: "isNoRandomBattleEnabled", initialValue: false) static var isNoRandomBattleEnabled: Bool
+    @UserDefault(key: "isGodModeEnabled", initialValue: false) static var isGodModeEnabled: Bool
+    @UserDefault(key: "isSephirothEnabledInParty", initialValue: false) static var isSephirothEnabledInParty: Bool
+    
+    @UserDefault(key: "gamePlaySpeed", initialValue: 1) static var gamePlaySpeed: Int
     @UserDefault(key: "highestScore", initialValue: 0) static var highestScore: Int
     @UserDefault(key: "nickname", initialValue: "") static var nickname: String
 }

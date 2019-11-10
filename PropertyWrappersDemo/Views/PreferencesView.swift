@@ -11,7 +11,7 @@ import SwiftUI
 struct PreferencesView: View {
     
     @ObservedObject var form = PreferencesForm()
-
+    
     var body: some View {
         NavigationView {
             Form {
@@ -28,11 +28,24 @@ struct PreferencesView: View {
                         Stepper("Highest Score", value: $form.highestScore)
                         Text(String(form.highestScore))
                     }
+                    HStack {
+                        Stepper("Gameplay Speed", value: $form.gamePlaySpeed)
+                        Text("\(String(form.gamePlaySpeed))Xs")
+                    }
                 }
                 
                 Section {
                     Toggle(isOn: $form.isCheatEnabled) {
                         Text("Enable Cheat")
+                    }
+                    Toggle(isOn: $form.isNoRandomBattleEnabled) {
+                        Text("No Random Battle")
+                    }
+                    Toggle(isOn: $form.isGodModeEnabled) {
+                        Text("Enable God mode")
+                    }
+                    Toggle(isOn: $form.isSephirothEnabledInParty) {
+                        Text("Enable Sephiroth in party")
                     }
                 }
             }
